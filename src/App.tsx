@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import style from "./App.module.scss";
+import Button from "./components/shared/button";
+import Input from "./components/shared/input";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={style["App"]}>
+      <div className={style["App__create-todo"]}>
+        <div className={style["App__create-todo__cards"]}>
+          {}
+        </div>
+        <div className={style["App__create-todo__form"]}>
+          <div className={style["App__create-todo__form__title"]}>
+            <Input
+              className={style["App__create-todo__form__title__input"]}
+              label="title"
+            />
+          </div>
+          <div className={style["App__create-todo__form__action"]}>
+            <Button
+              className={style["App__create-todo__form__button"]}
+              label="Add"
+            />
+          </div>
+        </div>
+      </div>
+      <div className={style["App__todo-lis"]}></div>
     </div>
   );
 }
