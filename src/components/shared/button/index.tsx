@@ -3,10 +3,10 @@ import React from "react";
 import style from "./Button.module.scss";
 
 function Button(props: any) {
-  const { className, label } = props;
+  const { className, label, onClick } = props;
   return (
     <div>
-      <button className={className} >
+      <button onClick={onClick} className={className} >
         {label}
       </button>
     </div>

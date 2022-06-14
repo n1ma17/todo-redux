@@ -15,20 +15,18 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-
+        justify-content: space-between;
+        padding: 10px;
         &__form {
             width: 100%;
-            height: 60%;
+            height: 25%;
             display: flex;
 
             &__title {
                 width: 80%;
                 display: flex;
 
-                &__input {
-                    width: 50%;
-                }
+               
             }
 
             &__action{
@@ -37,11 +35,20 @@
         }
 
         &__cards {
-            width: 40%;
-            height: 60%;
+            width: 100%;
+            height: 70%;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
+            overflow-y: scroll ;
+            &__card{
+                border-radius: 10px;
+                background-color: #fff;
+                padding: 10px;
+                min-width: 300px;
+                margin-top: 10px;
+            }
         }
     }
 
@@ -68,4 +75,7 @@
             grid-row: 2 /3;
         }
     }
+}
+.input {
+    width: 50%;
 }
